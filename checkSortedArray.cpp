@@ -1,4 +1,7 @@
- bool check(vector<int>& nums) {
+ 
+// https://leetcode.com/problems/check-if-array-is-sorted-and-rotated/
+
+bool check(vector<int>& nums) {
         
           int count =0;
         int n = nums.size();
