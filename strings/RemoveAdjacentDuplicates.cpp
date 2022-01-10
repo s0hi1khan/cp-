@@ -2,14 +2,13 @@
 
 
 
-
 class Solution {
-private:
-    bool checkDup(string s){
+private:   
+bool checkDup(string s){
         for(int i=0;i<s.length()-1;i++){
-            if(s[i]==s[i+1]){return true;}
+            if(s[i]==s[i+1]){return 1;}
         }
-        return false;
+        return 0;
     }
 public:
     string removeDuplicates(string s) {
@@ -19,17 +18,18 @@ public:
         while(i<n-1){
             
             if(s[i]==s[i+1]){
-                s.erase(i,2); 
-                i=0;
+                s.erase(i,2);
+                i=-1;
+                n=n-2;
             }
+           
             i++;
-            
             if(!checkDup(s)){
                 return s;
             }
-            
+           
         }
         
-        
+     return s;
     }
 };
