@@ -25,14 +25,18 @@ public:
         
         
         //second - reverse every rows
-        for(int i =0;i<n;i++){
-            for(int j =0;j<n/2;j++){
-                 int   temp2 = matrix[i][j];
-                       matrix[i][j] =  matrix[i][n-j-1];
-                       matrix[i][n-j-1] = temp2;
-            }  
-        }
+//         for(int i =0;i<n;i++){
+//             for(int j =0;j<n/2;j++){
+//                  int   temp2 = matrix[i][j];
+//                        matrix[i][j] =  matrix[i][n-j-1];
+//                        matrix[i][n-j-1] = temp2;
+//             }  
+//         }
         
+        
+        for(int i =0;i<n;i++){
+            reverse(matrix[i].begin() , matrix[i].end());
+        }
    
     }
 };
