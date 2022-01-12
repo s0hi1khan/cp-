@@ -3,7 +3,7 @@
 // ans = gcd(a,b) = gcd( a-b , b){a<=b}  =  gcd(a&b , b)  =  gcd(ans , 0) ;
 // gcd(a,b) * lcm(a,b) = a*b;
 
-
+//gcd is nothing but hcf
 
 int gcd(int a , int b){
   
