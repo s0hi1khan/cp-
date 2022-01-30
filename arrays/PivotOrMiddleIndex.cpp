@@ -51,3 +51,29 @@ public:
         return -1;
     }
 };
+
+
+
+
+
+
+
+
+   int N = nums.size();
+        
+        for (int i = 1; i < N; ++i) {
+            nums[i] += nums[i-1];
+        }
+        
+        for (int pivot = 0; pivot < N; ++pivot) {
+            int left;
+            if (pivot != 0)
+                left = nums[pivot-1];
+            else
+                left = 0;
+            int right = nums[N-1] - nums[pivot];
+            if (right == left)
+                return pivot;
+        }
+            
+        return -1;
